@@ -1,0 +1,32 @@
+{
+    "guilds": [
+      {
+        "name": "Space Sharks",
+        "ranking": 10,
+        "members": 12,
+        "cap": 15,
+        "level_requirement": 20,
+        "recruiting": true,
+        "logo": "space_sharks_logo.png"
+      },
+      {
+        "name": "Space Wolves",
+        "ranking": 5,
+        "members": 17,
+        "cap": 25,
+        "level_requirement": 30,
+        "recruiting": true,
+        "logo": "space_wolves_logo.png"
+      },
+      {
+        "name": "Salamanders",
+        "ranking": 3,
+        "members": 30,
+        "cap": 30,
+        "level_requirement": 40,
+        "recruiting": false,
+        "logo": "salamanders_logo.png"
+      }
+    ]
+  }
+  

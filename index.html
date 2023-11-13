@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pants of Horus Guild Cluster</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Pants of Horus Guild Cluster</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Guild</th>
+        <th>Ranking</th>
+        <th>Members</th>
+        <th>Cap</th>
+        <th>Level Requirement</th>
+        <th>Recruiting</th>
+        <th>Logo</th>
+      </tr>
+    </thead>
+    <tbody id="guildTableBody">
+      <!-- Data will be dynamically populated here -->
+    </tbody>
+  </table>
+  <script>
+    // Your guild data directly included in the HTML
+    const guildData = {
+      "guilds": [
+        {
+          "name": "Space Sharks",
+          "ranking": 1,
+          "members": 120,
+          "cap": 150,
+          "level_requirement": 30,
+          "recruiting": true,
+          "logo": "space_sharks_logo.png"
+        },
+        {
+          "name": "Space Wolves",
+          "ranking": 2,
+          "members": 90,
+          "cap": 100,
+          "level_requirement": 25,
+          "recruiting": false,
+          "logo": "space_wolves_logo.png"
+        },
+        {
+          "name": "Salamanders",
+          "ranking": 3,
+          "members": 75,
+          "cap": 80,
+          "level_requirement": 20,
+          "recruiting": true,
+          "logo": "salamanders_logo.png"
+        }
+      ]
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const tbody = document.getElementById('guildTableBody');
+
+      guildData.guilds.forEach(guild => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${guild.name}</td>
+          <td>${guild.ranking}</td>
+          <td>${guild.members}</td>
+          <td>${guild.cap}</td>
+          <td>${guild.level_requirement}</td>
+          <td>${guild.recruiting ? 'Yes' : 'No'}</td>
+          <td><img src="${guild.logo}" alt="${guild.name} Logo" height="50"></td>
+        `;
+
+        tbody.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>
